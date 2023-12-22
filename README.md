@@ -1,6 +1,6 @@
-Hotel California Database Project
+## Hotel California Database Project
 
-Description
+### Description
 Hotel California is a hotel enterprise with 10 hotel locations throughout the U.S. 
 This project showcases a portion of the tasks taken on by the chain’s database system. 
 Through this program users can access customer and employee interfaces. 
@@ -11,11 +11,11 @@ Employees at the front desk are able to check-in and check-out customers and emp
 
 
 
-Usage
+### Usage
 The program will start by prompting the user to enter their database login and password. 
 Once the correct login information is entered, the user will be prompted to choose to enter the customer interface,  the employee interface, or exit. 
 
-Customer Interface
+### Customer Interface
 If the user selects the customer interface, it starts by listing all of Hotel California’s locations and having the user either select a location or enter 0 to view the amenities for each location.
 Once the user selects a hotel location, they will be asked to enter start and end dates for when they will be staying at the hotel. 
 The program then validates the entered dates ensuring they are actual dates, that the dates occur in the future, reservations are not made more than three years in advance, that the end date occurs after the start date, and that no reservations over 30 days can be made.
@@ -31,7 +31,7 @@ Once found, the customer will be asked to confirm their account information is c
 Once their information is up to date, they will be asked to select a payment method, and if they are a frequent guest member with enough points to pay for their reservation they can also choose to pay with points. 
 Once all payment information is confirmed, the reservation is added to the database and a transaction is made.
 
-Possible test date for existing customers
+#### Possible test date for existing customers
 Start Date: 09-09-2024
 	End Date: 09-20-2024
 	Room Type: King
@@ -48,7 +48,7 @@ Customer not in database:
 	Jonny Blue
 
 
-Employee Interface
+### Employee Interface
 If the user selects the employee interface, they will be asked to login using their employee id and password. 
 The employee is then taken to an interface for the specific hotel and department they work at.
 
@@ -59,7 +59,7 @@ If the customer is checking in, they will be assigned a clean, unoccupied room n
 If they are checking out the cleaning status of their assigned room will be changed to not clean. 
 After a customer has been checked in/out the check-in status on their reservation will be updated.
 
-Possible test data for front desk interface
+#### Possible test data for front desk interface
 	Id: 202
 	Password: vPhHanu8OKm6
 1. Check in
@@ -86,7 +86,7 @@ George Savin	212-183-1020
 For employees working in the housekeeping department, they will be asked to enter the room number of the room they want to check/update the cleaning status for. 
 Once a valid room has been entered, the cleaning status of the room will be displayed and the employee will have the option to change the status from clean to not clean or vice versa.
 
-Possible test data for housekeeping interface
+#### Possible test data for housekeeping interface
 	Id: 306 
 	Password: 7Szj6p
 	Room that is clean: 20
@@ -96,12 +96,12 @@ Possible test data for housekeeping interface
 
 
 
-Database Design
+### Database Design
 Final ERD: https://drive.google.com/file/d/107RD6HN6lRBNEgYuJHxEPHsSOv44rsyK/view?usp=sharing 
 Changes made to ERD
 A few changes we made to database design as I developed the project. The biggest change is the addition of the employees table in order to create a system where employee interfaces can only be accessed through login information. Another change was the addition of an assigned_room attribute to reservation, in order to track the room assigned to customers after they check in. A description attribute was added to transactions in order to better track what transactions were made for.
 
-Notes on tables
+### Notes on tables
 Customer
 If points = null, customer is not in frequent guest program
 Rooms
@@ -111,6 +111,6 @@ If check_in_stat =  0, the customer has not checked in. If it is 1, the customer
 If cancellation = 1, the reservation has been canceled.
 If assigned_room = 0, a room has not been assigned to the reservation yet.
 
-Sources
+### Sources
 Mock date generated through: https://www.mockaroo.com/
 Folder with generated data files: https://drive.google.com/drive/folders/1SFO8snJKxcFAOBMx6VdVh_QpD3Y3sajJ?usp=sharing 
